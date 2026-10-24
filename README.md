@@ -73,3 +73,23 @@ Higher output resolution does not guarantee greater semantic accuracy or proport
 ## License and model usage
 
 Review the PixArt-Alpha model card and license/usage terms before redistribution or public deployment. This repository contains application code, not model weights.
+
+## Running the Demo on Kaggle
+
+The project was tested in a Kaggle Notebook with Internet enabled and two NVIDIA Tesla T4 GPUs.
+
+### Setup
+1. Install the required Python libraries using the provided `requirements.txt` or the installation command documented in the notebook.
+2. Load the pretrained PixArt-Alpha model: `PixArt-alpha/PixArt-XL-2-512x512`.
+3. Generate a test image at 512 × 512 resolution.
+4. Launch the Gradio interface using `demo.launch(share=True)`.
+
+### Features tested
+- Text-to-image generation from a user prompt
+- Resolution selection
+- Inference-step and random-seed controls
+- Image output through a Gradio interface
+
+### Limitations
+The public Gradio link is temporary and depends on the Kaggle session remaining active. GPU availability and usage are subject to Kaggle's limits. The current implementation uses a pretrained PixArt-Alpha model; it does not yet include a completed RAE-versus-VAE research comparison.
+
